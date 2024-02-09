@@ -1,0 +1,51 @@
+From b2facedeb0b59f78cc68acd9f52d87573c7c4455 Mon Sep 17 00:00:00 2001
+From: Marko Lindqvist <cazfi74@gmail.com>
+Date: Fri, 9 Feb 2024 10:51:53 +0200
+Subject: [PATCH 5/5] Metadata: Add developer_name tags
+
+Signed-off-by: Marko Lindqvist <cazfi74@gmail.com>
+---
+ bootstrap/org.freeciv.gtk322.appdata.xml.in | 1 +
+ bootstrap/org.freeciv.qt.appdata.xml.in     | 1 +
+ bootstrap/org.freeciv.sdl2.appdata.xml.in   | 1 +
+ 3 files changed, 3 insertions(+)
+
+diff --git a/bootstrap/org.freeciv.gtk322.appdata.xml.in b/bootstrap/org.freeciv.gtk322.appdata.xml.in
+index e672178ca2..d132a55639 100644
+--- a/bootstrap/org.freeciv.gtk322.appdata.xml.in
++++ b/bootstrap/org.freeciv.gtk322.appdata.xml.in
+@@ -4,6 +4,7 @@
+     <id>org.freeciv.gtk322</id>
+     <project_license>GPL-2.0-or-later</project_license>
+     <metadata_license>CC0</metadata_license>
++    <developer_name>Freeciv Team</developer_name>
+     <summary>Gtk+-3.22 based client for the Freeciv game</summary>
+     <description>
+         <p>
+diff --git a/bootstrap/org.freeciv.qt.appdata.xml.in b/bootstrap/org.freeciv.qt.appdata.xml.in
+index 1cd8d60011..02146b6fa6 100644
+--- a/bootstrap/org.freeciv.qt.appdata.xml.in
++++ b/bootstrap/org.freeciv.qt.appdata.xml.in
+@@ -4,6 +4,7 @@
+     <id>org.freeciv.qt</id>
+     <project_license>GPL-2.0-or-later</project_license>
+     <metadata_license>CC0</metadata_license>
++    <developer_name>Freeciv Team</developer_name>
+     <summary>Qt based client for the Freeciv game</summary>
+     <description>
+         <p>
+diff --git a/bootstrap/org.freeciv.sdl2.appdata.xml.in b/bootstrap/org.freeciv.sdl2.appdata.xml.in
+index 1a32fba3df..7ea50206b7 100644
+--- a/bootstrap/org.freeciv.sdl2.appdata.xml.in
++++ b/bootstrap/org.freeciv.sdl2.appdata.xml.in
+@@ -4,6 +4,7 @@
+     <id>org.freeciv.sdl2</id>
+     <project_license>GPL-2.0-or-later</project_license>
+     <metadata_license>CC0</metadata_license>
++    <developer_name>Freeciv Team</developer_name>
+     <summary>SDL2 based client for the Freeciv game</summary>
+     <description>
+         <p>
+-- 
+2.43.0
+
