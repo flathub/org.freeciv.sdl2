@@ -1,4 +1,4 @@
-From 817d5eaee5352fc13bc3ce4fc05529510864dfaa Mon Sep 17 00:00:00 2001
+From 5a8d74b1d3317be477a182580a0f6dc8a4413135 Mon Sep 17 00:00:00 2001
 From: Marko Lindqvist <cazfi74@gmail.com>
 Date: Sat, 27 Jan 2024 00:00:49 +0200
 Subject: [PATCH 3/3] Rename modpack installer icon
@@ -14,7 +14,8 @@ Signed-off-by: Marko Lindqvist <cazfi74@gmail.com>
  ...{freeciv-modpack.png => org.freeciv.sdl2.mp.png} | Bin
  data/icons/Makefile.am                              |  10 +++++-----
  .../freeciv-modpack.png => org.freeciv.sdl2.mp.png} | Bin
- 9 files changed, 7 insertions(+), 7 deletions(-)
+ meson.build                                         |   4 ++--
+ 10 files changed, 9 insertions(+), 9 deletions(-)
  rename data/{freeciv-modpack.png => icons/128x128/org.freeciv.sdl2.mp.png} (100%)
  rename data/icons/16x16/{freeciv-modpack.png => org.freeciv.sdl2.mp.png} (100%)
  rename data/icons/32x32/{freeciv-modpack.png => org.freeciv.sdl2.mp.png} (100%)
@@ -97,6 +98,28 @@ diff --git a/data/icons/128x128/freeciv-modpack.png b/data/org.freeciv.sdl2.mp.p
 similarity index 100%
 rename from data/icons/128x128/freeciv-modpack.png
 rename to data/org.freeciv.sdl2.mp.png
+diff --git a/meson.build b/meson.build
+index aa1bc6fb68..1954cf5bef 100644
+--- a/meson.build
++++ b/meson.build
+@@ -2940,7 +2940,7 @@ i = ['16x16', '32x32', '48x48', '64x64', '128x128']
+ foreach iconsize : i
+     install_data(join_paths('data/icons/', iconsize, 'freeciv-client.png'),
+                  join_paths('data/icons/', iconsize, 'freeciv-server.png'),
+-                 join_paths('data/icons/', iconsize, 'freeciv-modpack.png'),
++                 join_paths('data/icons/', iconsize, 'org.freeciv.sdl2.mp.png'),
+                  join_paths('data/icons/', iconsize, 'freeciv-ruledit.png'),
+                  install_dir : join_paths(get_option('datadir'), 'icons/hicolor', iconsize, 'apps'))
+ endforeach
+@@ -3563,7 +3563,7 @@ fcmp_common = static_library('fcmp_common',
+   )
+ 
+ install_data(
+-  'data/freeciv-modpack.png',
++  'data/org.freeciv.sdl2.mp.png',
+   install_dir : join_paths(get_option('datadir'), 'freeciv')
+   )
+ 
 -- 
-2.43.0
+2.45.2
 

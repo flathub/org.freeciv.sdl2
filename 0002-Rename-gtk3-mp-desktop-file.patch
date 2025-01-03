@@ -1,4 +1,4 @@
-From ad6fe51f0edab4a20d05cdaad7314fbb863bfb94 Mon Sep 17 00:00:00 2001
+From dd6143e76e72fffe13172fd9fc1f73d28f420064 Mon Sep 17 00:00:00 2001
 From: Marko Lindqvist <cazfi74@gmail.com>
 Date: Fri, 26 Jan 2024 23:55:05 +0200
 Subject: [PATCH 2/3] Rename gtk3 mp desktop file
@@ -10,11 +10,12 @@ Signed-off-by: Marko Lindqvist <cazfi74@gmail.com>
  bootstrap/Makefile.am                                         | 4 ++--
  bootstrap/org.freeciv.gtk3.mp.metainfo.xml.in                 | 2 +-
  ...rg.freeciv.gtk3.mp.desktop => org.freeciv.sdl2.mp.desktop} | 0
- 3 files changed, 3 insertions(+), 3 deletions(-)
+ meson.build                                                   | 2 +-
+ 4 files changed, 4 insertions(+), 4 deletions(-)
  rename bootstrap/{org.freeciv.gtk3.mp.desktop => org.freeciv.sdl2.mp.desktop} (100%)
 
 diff --git a/bootstrap/Makefile.am b/bootstrap/Makefile.am
-index 1f100f2fba..ffa4dfedfa 100644
+index 64256393ed..ad15a0290f 100644
 --- a/bootstrap/Makefile.am
 +++ b/bootstrap/Makefile.am
 @@ -27,7 +27,7 @@ EXTRA_DIST =	freeciv.project		\
@@ -36,10 +37,10 @@ index 1f100f2fba..ffa4dfedfa 100644
  
  if MODINST_GTK4
 diff --git a/bootstrap/org.freeciv.gtk3.mp.metainfo.xml.in b/bootstrap/org.freeciv.gtk3.mp.metainfo.xml.in
-index 3c5a87c82a..06fdb81e36 100644
+index d2ddf8314c..2395af9198 100644
 --- a/bootstrap/org.freeciv.gtk3.mp.metainfo.xml.in
 +++ b/bootstrap/org.freeciv.gtk3.mp.metainfo.xml.in
-@@ -14,7 +14,7 @@
+@@ -17,7 +17,7 @@
              Freeciv modpack utility can be used to automatically download and install custom rulesets, tilesets, soundsets, and maps for freeciv to use.
          </p>
      </description>
@@ -52,6 +53,19 @@ diff --git a/bootstrap/org.freeciv.gtk3.mp.desktop b/bootstrap/org.freeciv.sdl2.
 similarity index 100%
 rename from bootstrap/org.freeciv.gtk3.mp.desktop
 rename to bootstrap/org.freeciv.sdl2.mp.desktop
+diff --git a/meson.build b/meson.build
+index 720b56e650..aa1bc6fb68 100644
+--- a/meson.build
++++ b/meson.build
+@@ -3590,7 +3590,7 @@ executable('freeciv-mp-gtk3',
+   )
+ 
+ install_data(
+-  'bootstrap/org.freeciv.gtk3.mp.desktop',
++  'bootstrap/org.freeciv.sdl2.mp.desktop',
+   install_dir : join_paths(get_option('prefix'), 'share/applications')
+   )
+ 
 -- 
-2.43.0
+2.45.2
 
