@@ -1,7 +1,7 @@
 app-id: org.freeciv.sdl2
-runtime: org.freedesktop.Platform
-runtime-version: '24.08'
-sdk: org.freedesktop.Sdk
+runtime: org.gnome.Platform
+runtime-version: '48'
+sdk: org.gnome.Sdk
 command: freeciv-sdl2
 rename-icon: freeciv-client
 finish-args:
@@ -17,15 +17,15 @@ modules:
     no-autogen: true
     config-opts:
       - -Dclients=sdl2
-      - -Dfcmp=gtk3
+      - -Dfcmp=gtk4
       - -Dtools=[]
     sources:
       - type: archive
-        url: "https://sourceforge.net/projects/freeciv/files/Freeciv 3.2/3.2.0-beta2/freeciv-3.2.0-beta2.tar.xz"
-        sha256: 425cce907e985cfe1b5a1815043bfc2b57c2e089d23f24be510921bd0d1ae7c3
+        url: "https://sourceforge.net/projects/freeciv/files/Freeciv 3.2/3.2.0-RC1/freeciv-3.2.0-RC1.tar.xz"
+        sha256: f6b7310f7838c58efe118029b606906cd83b35700c5ff25d95b7568df80a5d60
       - type: patch
         path: 0001-Mark-flathub-as-the-distributor.patch
       - type: patch
-        path: 0002-Rename-gtk3-mp-desktop-file.patch
+        path: 0002-Rename-gtk4-mp-desktop-file.patch
       - type: patch
         path: 0003-Rename-modpack-installer-icon.patch
