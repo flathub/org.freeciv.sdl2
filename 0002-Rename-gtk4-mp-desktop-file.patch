@@ -1,0 +1,48 @@
+From 1b85084bbe9abe9a579f91cb6e0dc82031bd7ee1 Mon Sep 17 00:00:00 2001
+From: Marko Lindqvist <cazfi74@gmail.com>
+Date: Fri, 4 Jul 2025 01:59:23 +0300
+Subject: [PATCH 2/3] Rename gtk4 mp desktop file
+
+Make it org.freeciv.sdl2.mp.desktop
+
+Signed-off-by: Marko Lindqvist <cazfi74@gmail.com>
+---
+ bootstrap/org.freeciv.gtk4.mp.metainfo.xml.in                   | 2 +-
+ ...{org.freeciv.gtk4.mp.desktop => org.freeciv.sdl2.mp.desktop} | 0
+ meson.build                                                     | 2 +-
+ 3 files changed, 2 insertions(+), 2 deletions(-)
+ rename bootstrap/{org.freeciv.gtk4.mp.desktop => org.freeciv.sdl2.mp.desktop} (100%)
+
+diff --git a/bootstrap/org.freeciv.gtk4.mp.metainfo.xml.in b/bootstrap/org.freeciv.gtk4.mp.metainfo.xml.in
+index be93f16867..a0afe61043 100644
+--- a/bootstrap/org.freeciv.gtk4.mp.metainfo.xml.in
++++ b/bootstrap/org.freeciv.gtk4.mp.metainfo.xml.in
+@@ -17,7 +17,7 @@
+             Freeciv modpack utility can be used to automatically download and install custom rulesets, tilesets, soundsets, and maps for freeciv to use.
+         </p>
+     </description>
+-    <launchable type="desktop-id">org.freeciv.gtk4.mp.desktop</launchable>
++    <launchable type="desktop-id">org.freeciv.sdl2.mp.desktop</launchable>
+ 
+     <url type="homepage">https://www.freeciv.org/</url>
+     <url type="bugtracker">https://osdn.net/projects/freeciv/ticket/</url>
+diff --git a/bootstrap/org.freeciv.gtk4.mp.desktop b/bootstrap/org.freeciv.sdl2.mp.desktop
+similarity index 100%
+rename from bootstrap/org.freeciv.gtk4.mp.desktop
+rename to bootstrap/org.freeciv.sdl2.mp.desktop
+diff --git a/meson.build b/meson.build
+index 77b6680c3a..5a27e25b49 100644
+--- a/meson.build
++++ b/meson.build
+@@ -4120,7 +4120,7 @@ executable('freeciv-mp-gtk4',
+   )
+ 
+ install_data(
+-  'bootstrap/org.freeciv.gtk4.mp.desktop',
++  'bootstrap/org.freeciv.sdl2.mp.desktop',
+   install_dir : join_paths(get_option('prefix'), 'share/applications')
+   )
+ 
+-- 
+2.47.2
+
