@@ -1,7 +1,7 @@
-From 6595eb24601749796f7a635c0e94d27631e806cf Mon Sep 17 00:00:00 2001
+From cdd6d6bcf3c5a85bd548b06bf490c222baa9d47e Mon Sep 17 00:00:00 2001
 From: Marko Lindqvist <cazfi74@gmail.com>
-Date: Fri, 4 Jul 2025 01:29:13 +0300
-Subject: [PATCH 1/3] Mark flathub as the distributor
+Date: Thu, 10 Jul 2025 11:09:38 +0300
+Subject: [PATCH] Mark flathub as the distributor
 
 Signed-off-by: Marko Lindqvist <cazfi74@gmail.com>
 ---
@@ -9,18 +9,18 @@ Signed-off-by: Marko Lindqvist <cazfi74@gmail.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/fc_version b/fc_version
-index 7ba4e446ef..ed5ead62f8 100755
+index f9621c56ae..743956bfcb 100755
 --- a/fc_version
 +++ b/fc_version
-@@ -76,7 +76,7 @@ DEFAULT_FOLLOW_TAG=S3_2
- #     so would break network capability of supposedly "compatible" releases.
+@@ -81,7 +81,7 @@ NETWORK_CAPSTRING="+Freeciv-3.2-network ownernull16 unignoresync"
+ # patch also this field to contain your identification.
  #
- NETWORK_CAPSTRING="+Freeciv-3.2-network ownernull16"
+ # See doc/README.packaging chapter "Compatibility of modified versions"
 -FREECIV_DISTRIBUTOR=""
 +FREECIV_DISTRIBUTOR="flathub"
  
- if test "x$FREECIV_LABEL_FORCE" != "x" ; then
-   VERSION_LABEL=$(echo $FREECIV_LABEL_FORCE | sed "s/<base>/$VERSION_LABEL/g")
+ if test "${FREECIV_LABEL_FORCE}" != "" ; then
+   VERSION_LABEL="$(echo "${FREECIV_LABEL_FORCE}" | sed "s/<base>/${VERSION_LABEL}/g")"
 -- 
 2.47.2
 
