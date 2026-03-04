@@ -40,8 +40,8 @@ modules:
       - -Dtools=[]
     sources:
       - type: archive
-        url: "https://sourceforge.net/projects/freeciv/files/Freeciv 3.2/3.2.2/freeciv-3.2.2.tar.xz"
-        sha256: ed230084e885d19d82170a8b39e43e3291ec446c37239bf2bee8e11245c88960
+        url: "https://sourceforge.net/projects/freeciv/files/Freeciv 3.2/3.2.3/freeciv-3.2.3.tar.xz"
+        sha256: 989d6d58bd4cd97a4899e7e25afdee6c35fd03f87a379428a6e196d600d8d307
       - type: patch
         path: 0001-Mark-flathub-as-the-distributor.patch
       - type: patch
