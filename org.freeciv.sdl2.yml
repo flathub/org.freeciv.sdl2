@@ -38,10 +38,11 @@ modules:
       - -Dclients=sdl2
       - -Dfcmp=gtk4
       - -Dtools=[]
+      - -Daudio=sdl2
     sources:
       - type: archive
-        url: "https://sourceforge.net/projects/freeciv/files/Freeciv 3.2/3.2.5/freeciv-3.2.5.tar.xz"
-        sha256: d32808f02a9b9f49ef159bcbf266b16ce2a3ce6ea8f71115d80f952c3cc609e8
+        url: "https://sourceforge.net/projects/freeciv/files/Freeciv 3.2/3.2.6/freeciv-3.2.6.tar.xz"
+        sha256: b3ce15f54083b1fca146f62837a5f7d41d298537fa34940cca70eeb09c7a9c6e
       - type: patch
         path: 0001-Mark-flathub-as-the-distributor.patch
       - type: patch
