@@ -1,6 +1,6 @@
 app-id: org.freeciv.sdl2
 runtime: org.gnome.Platform
-runtime-version: '50'
+runtime-version: '51'
 sdk: org.gnome.Sdk
 command: freeciv-sdl2
 rename-icon: freeciv-client
@@ -20,8 +20,8 @@ modules:
       - -DSDL2IMAGE_STRICT=ON
     sources:
       - type: archive
-        url: https://github.com/libsdl-org/SDL_image/releases/download/release-2.8.8/SDL2_image-2.8.8.tar.gz
-        sha256: 2213b56fdaff2220d0e38c8e420cbe1a83c87374190cba8c70af2156097ce30a
+        url: https://github.com/libsdl-org/SDL_image/releases/download/release-2.8.12/SDL2_image-2.8.12.tar.gz
+        sha256: 393f5efb50536ec13ca4f4affb69cc9966d3c3f969e6c5e701faddf9f9785381
   - name: SDL2_ttf
     buildsystem: cmake-ninja
     builddir: true
@@ -31,6 +31,16 @@ modules:
       - type: archive
         url: https://github.com/libsdl-org/SDL_ttf/releases/download/release-2.24.0/SDL2_ttf-2.24.0.tar.gz
         sha256: 0b2bf1e7b6568adbdbc9bb924643f79d9dedafe061fa1ed687d1d9ac4e453bfd
+  - name: SDL2_mixer
+    buildsystem: cmake-ninja
+    builddir: true
+    config-opts:
+      - -DSDL2MIXER_MOD=OFF
+      - -DSDL2MIXER_MIDI=OFF
+    sources:
+      - type: archive
+        url: https://github.com/libsdl-org/SDL_mixer/releases/download/release-2.8.2/SDL2_mixer-2.8.2.tar.gz
+        sha256: 938dff531d00ace2296557a6599abe6f34599e2f34f0a4a08a397e2ccac8b8f7
   - name: freeciv-sdl2
     buildsystem: meson
     no-autogen: true
@@ -41,8 +51,8 @@ modules:
       - -Daudio=sdl2
     sources:
       - type: archive
-        url: "https://sourceforge.net/projects/freeciv/files/Freeciv 3.2/3.2.6/freeciv-3.2.6.tar.xz"
-        sha256: b3ce15f54083b1fca146f62837a5f7d41d298537fa34940cca70eeb09c7a9c6e
+        url: "https://sourceforge.net/projects/freeciv/files/Freeciv 3.2/3.2.7/freeciv-3.2.7.tar.xz"
+        sha256: 2720076d50f29db42cdc5e510e7c098f7793f7c0ac410fdf390a52bc57507917
       - type: patch
         path: 0001-Mark-flathub-as-the-distributor.patch
       - type: patch
